@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	Won  string = "WON"
-	Lost string = "LOST"
+	Won  string = "WIN"
+	Lost string = "LOSS"
 )
 
 func SettleWinnerGuess(score, winner string) string {

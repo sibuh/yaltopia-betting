@@ -11,6 +11,19 @@
 # For cricket match i only have done sample selection for Win/Loss as Win/Draw/Win market is not usual in cricket match as is in Football matches. 
 # NO sample selection for Over/Under selection for cricket match because even though over/under odds exist in prematch data cricket match does not have recored of "1st_over" and "innings_1".
 
+# double chance markets are usual in matches with three possible outcomes (typically: Home Win, Draw, Away Win) like football. This is unusall in volleyball and cricket where three possible outcomes are unusual.Double chances can result the following outcomes.
+
+# 1X – Home win or Draw
+
+# 12 – Home win or Away win
+
+# X2 – Draw or Away win. However in volleyball and 
+# cricket matches where markets are dominantly Win/Loss we can have only 12 combination. So bettor can not  bet for both Home Win and Away Win.
+
+
+
+
+
 # How to get app runing:
 # option 1: Run with built in go command
 # prerequest: install Golang better to have latest version like v1.23.3
@@ -24,6 +37,7 @@
 # 2. cd into yaltopia-betting folder
 # 3. run docker-compose up --build if you are using python version of docker-compose  
 # run docker compose up --build if you are using go version of docker compose
+# 4. wait until the app starts
 
 
 # To see the response of betting app endpoints 
