@@ -9,22 +9,25 @@ import (
 )
 
 func main() {
+	//create app instance
 	app := fiber.New()
+	//add logger middleware
 	app.Use(logger.New(logger.Config{
 
 		Format:     "${pid} ${status} - ${method} ${path}\n",
 		TimeFormat: "02-Jan-2006",
 	}))
-	// ... (define routes and other settings) ...
+
+	// routes
+
+	// / handler is not part of task just added at
+	// the begining to see server started successfully
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World 👋!")
 	})
 	app.Get("/vb", volleyball.VolleyballBetting)
-	app.Get("/cricket", cricket.CricketBetting)
+	app.Get("/crkt", cricket.CricketBetting)
 
-	app.Get("/users/:id", func(c *fiber.Ctx) error {
-		id := c.Params("id")
-		return c.SendString("User ID: " + id)
-	})
-	app.Listen(":3000") // Start the server on port 3000
+	// server will start at port 3000
+	app.Listen(":3000")
 }
